@@ -13,13 +13,30 @@ html *,
 html {
   font-size: 14px;
 }
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400; /* Noto Sans JPのレギュラーウェイトを指定 */
+}
+/* おもな太字タグのフォントウェイト設定 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+strong {
+  font-weight: 700;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
 @media (min-width: $breakpoint-tablet) {
   html {
     font-size: 16px;
   }
-}
-body {
-  font-family: sans-serif;
 }
 
 /**
@@ -47,6 +64,71 @@ body {
   background: url(../assets/post-bg.svg) repeat-x;
   background-position: 0 10px;
 }
+
+/**
+ * ポストヘッダー
+ */
+.post-header {
+  margin-bottom: 60px;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 1.875rem;
+    line-height: 1.5;
+  }
+}
+.post-header-photo-caption {
+  margin: 30px 0;
+  figcaption {
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: #747474;
+    text-align: center;
+  }
+}
+/**
+ * ポストコンテンツ
+ */
+.post-contents {
+  margin-bottom: 60px;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  h2 {
+    margin: 60px 0 60px 0;
+    padding: 1rem 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin: 30px 0;
+    line-height: 1.9;
+    text-align: justify;
+  }
+
+  mark {
+    // スタート地点から50%の位置で#ffff7cのグラデーションが始まるようにする
+    background: linear-gradient(transparent 50%, #ffff7c 50%);
+  }
+}
+.post-contents-list {
+  margin: 30px 0;
+  li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+/**
+ * ポストフッター
+ */
+.post-footer {
+  margin-bottom: 60px;
+}
+
 /**
  * 下部コンテナ
  */
@@ -102,6 +184,20 @@ body {
     padding: 80px 20px;
     margin: 0 auto;
     max-width: $breakpoint-web;
+  }
+  /**
+ * ポストコンテンツ
+ */
+  .post-contents {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+  }
+  /**
+ * ポストフッター
+ */
+  .post-footer {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
   }
   /**
    * 下部コンテナ
