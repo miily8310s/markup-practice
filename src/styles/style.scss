@@ -1,0 +1,122 @@
+/**
+ * variables　
+ */
+$breakpoint-tablet: 768px;
+$breakpoint-web: 1040px;
+
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: $breakpoint-tablet) {
+  html {
+    font-size: 16px;
+  }
+}
+body {
+  font-family: sans-serif;
+}
+
+/**
+ * ヘッダー　
+ */
+.page-header {
+  // 画面いっぱいに適用するスタイル集
+  background: url(../assets/header-topline.svg);
+  border-bottom: 1px solid #d8d8d8;
+}
+
+/**
+ * パンくずリスト
+ */
+.breadcrumb {
+  display: none;
+}
+
+/**
+ * メインコンテナ
+ */
+.post .main-container {
+  // コンテナ内に収まるスタイル集
+  padding: 80px 4%;
+  background: url(../assets/post-bg.svg) repeat-x;
+  background-position: 0 10px;
+}
+/**
+ * 下部コンテナ
+ */
+.page-bottom {
+  // 画面いっぱいに適用するスタイル集
+  background: url(../assets/bottom-bg.svg);
+}
+.bottom-container {
+  padding: 60px 4%;
+}
+/**
+ * フッター
+ */
+.page-footer {
+  // 画面いっぱいに適用するスタイル集
+  background: #000;
+}
+.footer-container {
+  padding: 60px 4%;
+}
+
+/**
+ * Webブラウザ用
+ */
+@media (min-width: $breakpoint-tablet) {
+  /**
+   * ヘッダー
+   */
+  .header-container {
+    // Web版では何もスタイルを適用させない
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: $breakpoint-web;
+  }
+  /**
+   * パンくずリスト
+   */
+  .breadcrumb {
+    // display:noneの解除
+    display: block;
+    // 画面いっぱいに適用するスタイル集
+    background: #efefef;
+  }
+  .bc-container {
+    padding: 12px 20px;
+    margin: 0 auto;
+    max-width: $breakpoint-web;
+  }
+  /**
+   * メインコンテナ
+   */
+  .post .main-container {
+    padding: 80px 20px;
+    margin: 0 auto;
+    max-width: $breakpoint-web;
+  }
+  /**
+   * 下部コンテナ
+   */
+  .bottom-container {
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: $breakpoint-web;
+  }
+  /**
+   * フッター
+   */
+  .footer-container {
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: $breakpoint-web;
+  }
+}
