@@ -3,6 +3,10 @@
  */
 $breakpoint-tablet: 768px;
 $breakpoint-web: 1040px;
+$sky-color: #73cbd6;
+$yellow-color: #ffff7c;
+$black-color: #000;
+$white-color: #fff;
 
 html *,
 ::before,
@@ -85,11 +89,11 @@ img {
   span {
     margin: 0 3px 0 0;
     padding: 2px 10px;
-    background: #73cbd6;
+    background: $sky-color;
     border-radius: 100px;
 
     a {
-      color: #fff;
+      color: $white-color;
       text-decoration: none;
     }
   }
@@ -106,7 +110,7 @@ img {
   }
   svg {
     margin-right: 5px;
-    color: #73cbd6;
+    color: $sky-color;
   }
 }
 .post-header-photo-caption {
@@ -131,8 +135,8 @@ img {
   h2 {
     margin: 60px 0 60px 0;
     padding: 1rem 0;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid $black-color;
+    border-bottom: 1px solid $black-color;
     font-size: 1.25rem;
   }
 
@@ -144,7 +148,7 @@ img {
 
   mark {
     // スタート地点から50%の位置で#ffff7cのグラデーションが始まるようにする
-    background: linear-gradient(transparent 50%, #ffff7c 50%);
+    background: linear-gradient(transparent 50%, $yellow-color 50%);
   }
 }
 .post-contents-list {
@@ -204,7 +208,7 @@ img {
     flex-basis: 70px;
   }
   .post-contents-chat-talk {
-    background: #ffff7c;
+    background: $yellow-color;
   }
 }
 /**
@@ -212,6 +216,34 @@ img {
  */
 .post-footer {
   margin-bottom: 60px;
+  h2 {
+    display: inline-block;
+    font-family: "Croissant One", cursive;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.25rem;
+    background: $black-color;
+    color: $white-color;
+  }
+}
+.post-footer-profile {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid $black-color;
+}
+.post-footer-profile-photo {
+  flex: 0 0 100px;
+  margin-right: 1rem;
+  img {
+    border-radius: 50%;
+  }
+}
+.post-footer-profile-text {
+  p {
+    margin: 0;
+    line-height: 1.9;
+  }
 }
 
 /**
@@ -229,7 +261,7 @@ img {
  */
 .page-footer {
   // 画面いっぱいに適用するスタイル集
-  background: #000;
+  background: $black-color;
 }
 .footer-container {
   padding: 60px 4%;

@@ -2,7 +2,8 @@ import headerimage from "../assets/post-headerimage.jpg";
 import photo2 from "../assets/post-photo2.jpg";
 import speaker1 from "../assets/speaker1.jpg";
 import speaker2 from "../assets/speaker2.jpg";
-import { FaPenNib, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import writer from "../assets/writer.jpg";
+import { FaPenNib, FaMapMarkerAlt, FaClock, FaPenFancy } from "react-icons/fa";
 
 export const MainContainer = () => {
   return (
@@ -106,15 +107,23 @@ export const MainContainer = () => {
             </div>
           </div>
         </div>
-        <div className="post-footer">
-          <p>
-            <strong>ポストフッター</strong>
-          </p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum,
-          aspernatur fuga iusto debitis eaque eius provident libero suscipit
-          quam! Suscipit amet dignissimos id soluta quae, veniam fuga
-          consequuntur placeat magni!
-        </div>
+        <footer class="post-footer">
+          <h2>
+            <FaPenFancy /> Profile
+          </h2>
+          <div class="post-footer-profile">
+            <div class="post-footer-profile-photo">
+              <img src={writer} alt="" />
+            </div>
+            <div class="post-footer-profile-text">
+              <p>
+                <strong>桑山みなと</strong>
+                <br />
+                大手出版社の編集者を経てライターとして独立。絵本、児童文学に詳しく、小学校の教員免許を持っているため、絵本作家や教育関係者へのインタビュー経験が多い。現在シアトルに長期滞在中で、Tansaku!では「アメリカ西海岸レポート」を連載している。
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
