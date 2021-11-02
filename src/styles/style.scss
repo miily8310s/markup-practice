@@ -104,6 +104,10 @@ img {
   span {
     margin: 0 10px 0 0;
   }
+  svg {
+    margin-right: 5px;
+    color: #73cbd6;
+  }
 }
 .post-header-photo-caption {
   margin: 30px 0;
@@ -163,6 +167,45 @@ img {
   float: right;
   margin: 0 0 1rem 1rem;
   width: 40%;
+}
+.post-contents-chat {
+  margin: 30px 0;
+}
+.post-contents-chat-talk {
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+.post-contents-chat-1st,
+.post-contents-chat-2st {
+  display: flex;
+  margin: 15px 0;
+}
+.post-contents-chat-face {
+  img {
+    border-radius: 50%;
+  }
+}
+.post-contents-chat-talk {
+  flex-grow: 1;
+}
+.post-contents-chat-1st {
+  .post-contents-chat-face {
+    margin: 0 10px 0 0;
+    flex-basis: 70px;
+  }
+  .post-contents-chat-talk {
+    background: #b8e5ea;
+  }
+}
+.post-contents-chat-2st {
+  flex-direction: row-reverse;
+  .post-contents-chat-face {
+    margin: 0 0 0 10px;
+    flex-basis: 70px;
+  }
+  .post-contents-chat-talk {
+    background: #ffff7c;
+  }
 }
 /**
  * ポストフッター

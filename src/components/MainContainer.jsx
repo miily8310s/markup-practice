@@ -1,5 +1,8 @@
 import headerimage from "../assets/post-headerimage.jpg";
 import photo2 from "../assets/post-photo2.jpg";
+import speaker1 from "../assets/speaker1.jpg";
+import speaker2 from "../assets/speaker2.jpg";
+import { FaPenNib, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
 export const MainContainer = () => {
   return (
@@ -17,11 +20,19 @@ export const MainContainer = () => {
               <a href="/">食べる</a>
             </span>
           </div>
-          {/* TODO: React-iconを設定する */}
           <div className="post-header-info">
-            <span>桑山みなと</span>
-            <span>サンフランシスコ</span>
-            <span>2020.6.16</span>
+            <span>
+              <FaPenNib />
+              桑山みなと
+            </span>
+            <span>
+              <FaMapMarkerAlt />
+              サンフランシスコ
+            </span>
+            <span>
+              <FaClock />
+              2020.6.16
+            </span>
           </div>
           <figure class="post-header-photo-caption">
             <img src={headerimage} alt="" />
@@ -75,6 +86,24 @@ export const MainContainer = () => {
             <p>
               　店内にはけっこうお客さんがいた。ひとりで本を読んでいる若い男性、しずかにおしゃべりしている男女、常連らしいおじいちゃんは窓際で新聞を読んでいる。それぞれ自分の好きな時間を過ごしているという空気で居心地がいい。近くの席でパソコンを開いている女性と、なんとなく会話が始まった。彼女は教育関係の仕事をしていて、教材のアイディアを考えているところだった。
             </p>
+          </div>
+          <div className="post-contents-chat">
+            <div className="post-contents-chat-1st">
+              <div className="post-contents-chat-face">
+                <img src={speaker1} alt="" />
+              </div>
+              <div className="post-contents-chat-talk">
+                <p>学校で仕事をしているんですか？</p>
+              </div>
+            </div>
+            <div className="post-contents-chat-2st">
+              <div className="post-contents-chat-face">
+                <img src={speaker2} alt="" />
+              </div>
+              <div className="post-contents-chat-talk">
+                <p>学校で仕事をしているんですか？</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="post-footer">
