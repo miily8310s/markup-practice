@@ -1,4 +1,5 @@
 import headerimage from "../assets/post-headerimage.jpg";
+import photo2 from "../assets/post-photo2.jpg";
 
 export const MainContainer = () => {
   return (
@@ -8,6 +9,20 @@ export const MainContainer = () => {
           <h1>
             知らない街の「地元」の空気に触れたい！ファーマーズマーケットには情報がいっぱい
           </h1>
+          <div className="post-header-tag">
+            <span>
+              <a href="/">歩く</a>
+            </span>
+            <span>
+              <a href="/">食べる</a>
+            </span>
+          </div>
+          {/* TODO: React-iconを設定する */}
+          <div className="post-header-info">
+            <span>桑山みなと</span>
+            <span>サンフランシスコ</span>
+            <span>2020.6.16</span>
+          </div>
           <figure class="post-header-photo-caption">
             <img src={headerimage} alt="" />
             <figcaption>
@@ -41,6 +56,26 @@ export const MainContainer = () => {
               たくさん購入したくなるけれど、食べきれる量の果物や、お土産にできるジャムなどの加工品を選ぶ
             </li>
           </ul>
+          <div className="post-contents-info-box">
+            <p>
+              <strong>Green Farmers Market</strong>
+              <br />
+              毎週水曜日 9:00〜13:00
+              <br />
+              毎月第1日曜日 9:00〜15:00（フードスタンドは日曜日の出店が多い）
+              <br />
+            </p>
+          </div>
+          <h2>帰り道に見つけたカフェで出会った「地元」の情報</h2>
+          <div class="post-contents-float-box">
+            <img src={photo2} alt="" class="post-contents-float-right" />
+            <p>
+              　ファーマーズマーケットから市の中心街に移動する道でカフェを見つけた。歩き回ってちょっと疲れたしコーヒーでも飲んで休憩することにしよう。
+            </p>
+            <p>
+              　店内にはけっこうお客さんがいた。ひとりで本を読んでいる若い男性、しずかにおしゃべりしている男女、常連らしいおじいちゃんは窓際で新聞を読んでいる。それぞれ自分の好きな時間を過ごしているという空気で居心地がいい。近くの席でパソコンを開いている女性と、なんとなく会話が始まった。彼女は教育関係の仕事をしていて、教材のアイディアを考えているところだった。
+            </p>
+          </div>
         </div>
         <div className="post-footer">
           <p>
