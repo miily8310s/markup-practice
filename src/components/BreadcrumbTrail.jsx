@@ -1,7 +1,7 @@
 export const BreadcrumbTrail = () => {
   return (
-    <div class="breadcrumb">
-      <div class="bc-container">
+    <div className="breadcrumb">
+      <div className="bc-container">
         <p>
           <strong>パンくずリストコンテナ</strong>
         </p>

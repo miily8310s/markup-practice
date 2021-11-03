@@ -51,6 +51,51 @@ img {
   background: url(../assets/header-topline.svg);
   border-bottom: 1px solid #d8d8d8;
 }
+.header-container-sitetitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-container-logo {
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  padding-left: 15px;
+}
+.header-container-navbtn {
+  display: block;
+  background-image: url(../assets/nav-mobile-open.svg);
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &.-close {
+    background-image: url(../assets/nav-mobile-close.svg);
+  }
+}
+.header-container-nav {
+  // デフォルト値を解除 start
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  // デフォルト値を解除 end
+  display: flex;
+  flex-direction: column;
+
+  &.-collapse {
+    display: none;
+  }
+
+  li a {
+    display: block;
+    padding: 20px 30px;
+    border-top: 1px solid #d8d8d8;
+    background: #efefef;
+    color: $black-color;
+    text-decoration: none;
+  }
+}
 
 /**
  * パンくずリスト
@@ -279,6 +324,27 @@ img {
     padding: 0 20px;
     margin: 0 auto;
     max-width: $breakpoint-web;
+  }
+  .header-container-sitetitle {
+    display: block;
+    padding: 30px 0 0 0;
+  }
+  .header-container-navbtn {
+    // モバイル用のボタン
+    display: none;
+  }
+  .header-container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    li a {
+      padding: 6px 20px;
+      border-top: none;
+      background: none;
+      &:hover {
+        border-bottom: 4px solid #73cbd6;
+      }
+    }
   }
   /**
    * パンくずリスト
