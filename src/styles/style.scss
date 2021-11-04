@@ -507,6 +507,33 @@ img {
     }
   }
 }
+.home-popular {
+  margin: 0 0 60px 0;
+  border-top: 1px solid $deep-gray-color;
+  a {
+    color: $black-color;
+    text-decoration: none;
+  }
+}
+.home-popular-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid $deep-gray-color;
+}
+.home-popular-photo {
+  flex: 0 0 30%;
+  margin-right: 15px;
+}
+.home-popular-text h3 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.home-popular-text p {
+  display: none;
+}
+
 .hero-container {
   position: relative;
 }
@@ -691,6 +718,16 @@ img {
   }
   .home-latest-text {
     padding: 0;
+  }
+  .home-popular-text {
+    h3 {
+      font-size: 1.25rem;
+    }
+    p {
+      display: block;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
   }
   .news-container {
     max-width: 740px;
