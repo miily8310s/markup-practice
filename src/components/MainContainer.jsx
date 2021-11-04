@@ -7,8 +7,8 @@ import { FaPenNib, FaMapMarkerAlt, FaClock, FaPenFancy } from "react-icons/fa";
 
 export const MainContainer = () => {
   return (
-    <div class="page-main">
-      <div class="main-container">
+    <div className="page-main">
+      <div className="main-container">
         <header className="post-header">
           <h1>
             知らない街の「地元」の空気に触れたい！ファーマーズマーケットには情報がいっぱい
@@ -35,7 +35,7 @@ export const MainContainer = () => {
               2020.6.16
             </span>
           </div>
-          <figure class="post-header-photo-caption">
+          <figure className="post-header-photo-caption">
             <img src={headerimage} alt="" />
             <figcaption>
               グリルとフレッシュ、野菜の味の深みが変わってどちらも楽しめた
@@ -61,7 +61,7 @@ export const MainContainer = () => {
             　今回、旅行で<mark>ファーマーズマーケットを楽しむコツを3つ</mark>
             覚えたので、次は別の土地でもそのエリアの「市」を見つけて楽しむことにしよう。
           </p>
-          <ul class="post-contents-list">
+          <ul className="post-contents-list">
             <li>お店の人になんでも質問をする</li>
             <li>調理販売しているフードスタンドは要チェック</li>
             <li>
@@ -79,8 +79,8 @@ export const MainContainer = () => {
             </p>
           </div>
           <h2>帰り道に見つけたカフェで出会った「地元」の情報</h2>
-          <div class="post-contents-float-box">
-            <img src={photo2} alt="" class="post-contents-float-right" />
+          <div className="post-contents-float-box">
+            <img src={photo2} alt="" className="post-contents-float-right" />
             <p>
               　ファーマーズマーケットから市の中心街に移動する道でカフェを見つけた。歩き回ってちょっと疲れたしコーヒーでも飲んで休憩することにしよう。
             </p>
@@ -107,15 +107,15 @@ export const MainContainer = () => {
             </div>
           </div>
         </div>
-        <footer class="post-footer">
+        <footer className="post-footer">
           <h2>
             <FaPenFancy /> Profile
           </h2>
-          <div class="post-footer-profile">
-            <div class="post-footer-profile-photo">
+          <div className="post-footer-profile">
+            <div className="post-footer-profile-photo">
               <img src={writer} alt="" />
             </div>
-            <div class="post-footer-profile-text">
+            <div className="post-footer-profile-text">
               <p>
                 <strong>桑山みなと</strong>
                 <br />

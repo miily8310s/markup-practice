@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
-    <footer class="page-footer">
-      <div class="footer-container">
+    <footer className="page-footer">
+      <div className="footer-container">
         <p>
           <strong>フッターコンテナ</strong>
         </p>

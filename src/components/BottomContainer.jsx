@@ -1,7 +1,7 @@
 export const BottomContainer = () => {
   return (
-    <div class="page-bottom">
-      <div class="bottom-container">
+    <div className="page-bottom">
+      <div className="bottom-container">
         <p>
           <strong>ページ下部コンテナ</strong>
         </p>
