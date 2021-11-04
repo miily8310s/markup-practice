@@ -302,7 +302,61 @@ img {
   background: url(../assets/bottom-bg.svg);
 }
 .bottom-container {
-  padding: 60px 4%;
+  padding: 60px 4% 0;
+}
+.bottom-container-banner {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  div {
+    margin-bottom: 20px;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+}
+.followUs {
+  margin: 0 0 15px 0;
+  font-family: "Croissant One", cursive;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.sns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  div {
+    margin: 0 10px;
+    a {
+      display: block;
+      width: 70px;
+      height: 70px;
+      font-size: 30px;
+      background: $sky-color;
+      text-align: center;
+      color: #fff;
+      line-height: 70px;
+      border-radius: 50%;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.goTop {
+  text-align: center;
+  a {
+    padding: 1rem 4rem;
+    background: #000000;
+    border-radius: 20px 20px 0 0;
+    color: $white-color;
+    opacity: 0.6;
+    font-size: 1.25rem;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 /**
  * フッター
@@ -313,6 +367,49 @@ img {
 }
 .footer-container {
   padding: 60px 4%;
+}
+.footer-container-logo {
+  text-align: center;
+  margin-bottom: 30px;
+  img {
+    width: 160px;
+  }
+}
+.footer-pages-nav {
+  display: flex;
+  flex-direction: column;
+  // align-itemsは交差軸の制御を行う
+  // flex-directionがrowのときは列、columnのときは行の制御
+  // justify-contentは逆に主軸の制御
+  align-items: center;
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0 0 2rem 0;
+    font-size: 0.85rem;
+    a {
+      color: $deep-gray-color;
+      text-decoration: none;
+      &:hover {
+        color: $white-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  &.-about {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 0 20px 0;
+    li {
+      margin: 0 0.75rem 0 0.75rem;
+    }
+  }
+}
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: $deep-gray-color;
 }
 
 /**
@@ -417,6 +514,12 @@ img {
     margin: 0 auto;
     max-width: $breakpoint-web;
   }
+  .bottom-container-banner {
+    flex-direction: row;
+    div {
+      margin: 0 10px;
+    }
+  }
   /**
    * フッター
    */
@@ -424,5 +527,12 @@ img {
     padding: 60px 20px;
     margin: 0 auto;
     max-width: $breakpoint-web;
+  }
+  .footer-pages-nav {
+    flex-direction: row;
+    justify-content: center;
+    li {
+      margin: 0 1rem;
+    }
   }
 }

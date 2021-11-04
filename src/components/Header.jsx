@@ -1,5 +1,6 @@
 import { useState } from "react";
 import headerLogo from "../assets/header-logo.svg";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [collapseClass, setCollapseClass] = useState("");
@@ -7,7 +8,7 @@ export const Header = () => {
     setCollapseClass(collapseClass === "" ? "-collapse" : "");
   };
   return (
-    <header className="page-header">
+    <header className="page-header" id="#top">
       <div className="header-container">
         <div className="header-container-sitetitle">
           <h1 className="header-container-logo">
@@ -15,7 +16,6 @@ export const Header = () => {
               <img src={headerLogo} alt="Tansaku!" />
             </a>
           </h1>
-          {/* モバイル用に表示するボタン */}
           <div className="header-container-navbtn" onClick={AddCollapseClass}>
             ボタン
           </div>
@@ -23,7 +23,7 @@ export const Header = () => {
         <nav>
           <ul className={`header-container-nav  ${collapseClass}`}>
             <li>
-              <a href="/">HOME</a>
+              <Link to="top">HOME</Link>
             </li>
             <li>
               <a href="/">最新の特集</a>

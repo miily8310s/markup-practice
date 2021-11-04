@@ -1,19 +1,14 @@
 import "./styles/normalize.css";
-import { Header } from "./components/Header";
-import { BreadcrumbTrail } from "./components/BreadcrumbTrail";
-import { MainContainer } from "./components/MainContainer";
-import { BottomContainer } from "./components/BottomContainer";
-import { Footer } from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Top } from "./pages/Top";
 
 function App() {
   return (
-    <div className="post">
-      <Header />
-      <BreadcrumbTrail />
-      <MainContainer />
-      <BottomContainer />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/top" element={<Top />} />
+    </Routes>
   );
 }
 
