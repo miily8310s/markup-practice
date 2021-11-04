@@ -7,6 +7,9 @@ $sky-color: #73cbd6;
 $yellow-color: #ffff7c;
 $black-color: #000;
 $white-color: #fff;
+$gray-color: #efefef;
+$deep-gray-color: #d8d8d8;
+$upper-gray-color: #747474;
 
 html *,
 ::before,
@@ -49,7 +52,7 @@ img {
 .page-header {
   // 画面いっぱいに適用するスタイル集
   background: url(../assets/header-topline.svg);
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid $deep-gray-color;
 }
 .header-container-sitetitle {
   display: flex;
@@ -90,8 +93,8 @@ img {
   li a {
     display: block;
     padding: 20px 30px;
-    border-top: 1px solid #d8d8d8;
-    background: #efefef;
+    border-top: 1px solid $deep-gray-color;
+    background: $gray-color;
     color: $black-color;
     text-decoration: none;
   }
@@ -163,7 +166,7 @@ img {
   figcaption {
     margin-top: 5px;
     font-size: 0.75rem;
-    color: #747474;
+    color: $upper-gray-color;
     text-align: center;
   }
 }
@@ -342,7 +345,7 @@ img {
       border-top: none;
       background: none;
       &:hover {
-        border-bottom: 4px solid #73cbd6;
+        border-bottom: 4px solid $sky-color;
       }
     }
   }
@@ -353,12 +356,36 @@ img {
     // display:noneの解除
     display: block;
     // 画面いっぱいに適用するスタイル集
-    background: #efefef;
+    background: $gray-color;
   }
   .bc-container {
     padding: 12px 20px;
     margin: 0 auto;
     max-width: $breakpoint-web;
+  }
+  .bc-container-nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      font-size: 0.75rem;
+      color: $upper-gray-color;
+
+      a {
+        color: $upper-gray-color;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      svg {
+        position: relative;
+        top: 1px;
+        margin: 0 3px;
+      }
+    }
   }
   /**
    * メインコンテナ

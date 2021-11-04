@@ -1,14 +1,22 @@
+import { FaChevronRight } from "react-icons/fa";
+
 export const BreadcrumbTrail = () => {
   return (
     <div className="breadcrumb">
       <div className="bc-container">
-        <p>
-          <strong>パンくずリストコンテナ</strong>
-        </p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum,
-        aspernatur fuga iusto debitis eaque eius provident libero suscipit quam!
-        Suscipit amet dignissimos id soluta quae, veniam fuga consequuntur
-        placeat magni!
+        <ul className="bc-container-nav">
+          <li>
+            <a href="/">HOME</a>
+            <FaChevronRight />
+          </li>
+          <li>
+            <a href="/">アメリカ西海岸レポート</a>
+            <FaChevronRight />
+          </li>
+          <li>
+            知らない街の「地元」の空気に触れたい！ファーマーズマーケットには情報がいっぱい
+          </li>
+        </ul>
       </div>
     </div>
   );
