@@ -15,7 +15,7 @@ export const Footer = () => {
             <Link to="top">HOME</Link>
           </li>
           <li>
-            <a href="/">最新の特集</a>
+            <Link to="post">最新の特集</Link>
           </li>
           <li>
             <a href="/">地域別に読む</a>

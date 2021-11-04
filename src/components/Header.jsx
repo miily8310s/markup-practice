@@ -23,10 +23,10 @@ export const Header = () => {
         <nav>
           <ul className={`header-container-nav  ${collapseClass}`}>
             <li>
-              <Link to="top">HOME</Link>
+              <Link to="/">HOME</Link>
             </li>
             <li>
-              <a href="/">最新の特集</a>
+              <Link to="post">最新の特集</Link>
             </li>
             <li>
               <a href="/">地域別に読む</a>
