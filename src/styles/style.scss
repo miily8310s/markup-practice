@@ -47,6 +47,12 @@ img {
 }
 
 /**
+ * *******************　
+ *  ポストページ　
+ * *******************　
+ */
+
+/**
  * ヘッダー　
  */
 .page-header {
@@ -413,9 +419,56 @@ img {
 }
 
 /**
+ * *******************　
+ *  ホームページ　
+ * *******************　
+ */
+
+.home {
+  .page-main {
+    background-image: url(../assets/home-bg.svg);
+  }
+  .main-container {
+    padding: 60px 4%;
+  }
+}
+.hero-container {
+  position: relative;
+}
+.hero-container-logo {
+  width: 260px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-130px, -53px);
+}
+.home-lead {
+  margin: 0 auto 60px auto;
+  text-align: center;
+  max-width: 600px;
+  p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+}
+.page-news {
+  background: $gray-color;
+}
+.news-container {
+  padding: 60px 4%;
+}
+
+/**
  * Webブラウザ用
  */
 @media (min-width: $breakpoint-tablet) {
+  /**
+   * *******************　
+   *  ポストページ　
+   * *******************　
+   */
+
   /**
    * ヘッダー
    */
@@ -534,5 +587,28 @@ img {
     li {
       margin: 0 1rem;
     }
+  }
+
+  /**
+   * *******************　
+   *  ホームページ　
+   * *******************　
+   */
+
+  .home {
+    .main-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+  }
+  .hero-container-logo {
+    width: 400px;
+    transform: translate(-200px, -82px);
+  }
+  .news-container {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 60px 20px;
   }
 }
