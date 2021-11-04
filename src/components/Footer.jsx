@@ -1,4 +1,5 @@
 import footerLogo from "../assets/footer-logo.svg";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -11,7 +12,7 @@ export const Footer = () => {
         </div>
         <ul className="footer-pages-nav">
           <li>
-            <a href="/">HOME</a>
+            <Link to="top">HOME</Link>
           </li>
           <li>
             <a href="/">最新の特集</a>
