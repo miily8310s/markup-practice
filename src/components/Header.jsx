@@ -7,7 +7,7 @@ export const Header = () => {
     setCollapseClass(collapseClass === "" ? "-collapse" : "");
   };
   return (
-    <header className="page-header">
+    <header className="page-header" id="#top">
       <div className="header-container">
         <div className="header-container-sitetitle">
           <h1 className="header-container-logo">
@@ -15,7 +15,6 @@ export const Header = () => {
               <img src={headerLogo} alt="Tansaku!" />
             </a>
           </h1>
-          {/* モバイル用に表示するボタン */}
           <div className="header-container-navbtn" onClick={AddCollapseClass}>
             ボタン
           </div>
