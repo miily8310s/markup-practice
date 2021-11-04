@@ -559,8 +559,44 @@ img {
 }
 .news-container {
   padding: 60px 4%;
+  h2 {
+    margin: 0 0 30px 0;
+    font-family: "Croissant One", cursive;
+    font-weight: 400;
+    font-size: 1.85rem;
+  }
 }
-
+.home-news {
+  padding: 20px;
+  background: $white-color;
+  border-radius: 20px;
+  dl {
+    display: flex;
+    margin: 0;
+    padding: 20px 0;
+    border-top: 1px solid $deep-gray-color;
+    &:last-child {
+      border-bottom: 1px solid $deep-gray-color;
+    }
+  }
+  dt {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0 20px 0 0;
+  }
+  dd {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    a {
+      color: $sky-color;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
 /**
  * Webブラウザ用
  */
