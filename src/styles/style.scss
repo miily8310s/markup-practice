@@ -375,6 +375,37 @@ img {
     width: 160px;
   }
 }
+.footer-pages-nav {
+  display: flex;
+  flex-direction: column;
+  // align-itemsは交差軸の制御を行う
+  // flex-directionがrowのときは列、columnのときは行の制御
+  // justify-contentは逆に主軸の制御
+  align-items: center;
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0 0 2rem 0;
+    font-size: 0.85rem;
+    a {
+      color: $deep-gray-color;
+      text-decoration: none;
+      &:hover {
+        color: $white-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  &.-about {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 0 20px 0;
+    li {
+      margin: 0 0.75rem 0 0.75rem;
+    }
+  }
+}
 .copyright {
   text-align: center;
   font-size: 0.75rem;
@@ -496,5 +527,12 @@ img {
     padding: 60px 20px;
     margin: 0 auto;
     max-width: $breakpoint-web;
+  }
+  .footer-pages-nav {
+    flex-direction: row;
+    justify-content: center;
+    li {
+      margin: 0 1rem;
+    }
   }
 }
