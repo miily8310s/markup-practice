@@ -47,6 +47,12 @@ img {
 }
 
 /**
+ * *******************　
+ *  ポストページ　
+ * *******************　
+ */
+
+/**
  * ヘッダー　
  */
 .page-header {
@@ -413,9 +419,194 @@ img {
 }
 
 /**
+ * *******************　
+ *  ホームページ　
+ * *******************　
+ */
+
+.home {
+  .page-main {
+    background-image: url(../assets/home-bg.svg);
+  }
+  .main-container {
+    padding: 60px 4%;
+    h2 {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px auto;
+      width: 130px;
+      height: 130px;
+      background: url(../assets/home-titleshape.svg) no-repeat;
+      background-size: 130px 130px;
+      color: $white-color;
+      font-family: "Croissant One", cursive;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+}
+.home-latest {
+  margin: 0 0 60px 0;
+  display: grid;
+  // 1列の長さを定義
+  grid-template-columns: 1fr 1fr;
+  // 1行の長さを定義、最低100px
+  grid-auto-rows: minmax(100px, auto);
+  column-gap: 10px;
+  row-gap: 30px;
+}
+.home-latest-item {
+  border: 1px solid $deep-gray-color;
+  background: $white-color;
+}
+.home-latest-image {
+  img {
+    margin: 0 0 10px 0;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+.home-latest-text {
+  margin-bottom: 10px;
+  padding: 0 10px;
+  h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    a {
+      color: $black-color;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.home-tag {
+  margin-bottom: 1rem;
+  span {
+    margin-right: 3px;
+    padding: 2px 10px;
+    border: 1px solid $sky-color;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    a {
+      color: $sky-color;
+      text-decoration: none;
+    }
+  }
+}
+.home-info {
+  font-size: 0.75rem;
+  span {
+    svg {
+      padding-right: 5px;
+      color: $sky-color;
+    }
+  }
+}
+.home-popular {
+  margin: 0 0 60px 0;
+  border-top: 1px solid $deep-gray-color;
+  a {
+    color: $black-color;
+    text-decoration: none;
+  }
+}
+.home-popular-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid $deep-gray-color;
+}
+.home-popular-photo {
+  flex: 0 0 30%;
+  margin-right: 15px;
+}
+.home-popular-text h3 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.home-popular-text p {
+  display: none;
+}
+
+.hero-container {
+  position: relative;
+}
+.hero-container-logo {
+  width: 260px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-130px, -53px);
+}
+.home-lead {
+  margin: 0 auto 60px auto;
+  text-align: center;
+  max-width: 600px;
+  p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+}
+.page-news {
+  background: $gray-color;
+}
+.news-container {
+  padding: 60px 4%;
+  h2 {
+    margin: 0 0 30px 0;
+    font-family: "Croissant One", cursive;
+    font-weight: 400;
+    font-size: 1.85rem;
+  }
+}
+.home-news {
+  padding: 20px;
+  background: $white-color;
+  border-radius: 20px;
+  dl {
+    display: flex;
+    margin: 0;
+    padding: 20px 0;
+    border-top: 1px solid $deep-gray-color;
+    &:last-child {
+      border-bottom: 1px solid $deep-gray-color;
+    }
+  }
+  dt {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0 20px 0 0;
+  }
+  dd {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    a {
+      color: $sky-color;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+/**
  * Webブラウザ用
  */
 @media (min-width: $breakpoint-tablet) {
+  /**
+   * *******************　
+   *  ポストページ　
+   * *******************　
+   */
+
   /**
    * ヘッダー
    */
@@ -534,5 +725,49 @@ img {
     li {
       margin: 0 1rem;
     }
+  }
+
+  /**
+   * *******************　
+   *  ホームページ　
+   * *******************　
+   */
+
+  .home {
+    .main-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+  }
+  .hero-container-logo {
+    width: 400px;
+    transform: translate(-200px, -82px);
+  }
+  .home-latest {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+  .home-latest-item {
+    border: none;
+    background: none;
+  }
+  .home-latest-text {
+    padding: 0;
+  }
+  .home-popular-text {
+    h3 {
+      font-size: 1.25rem;
+    }
+    p {
+      display: block;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+  }
+  .news-container {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 60px 20px;
   }
 }

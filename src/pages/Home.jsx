@@ -1,17 +1,18 @@
+import React from "react";
 import { Header } from "../components/Header";
-import { BreadcrumbTrail } from "../components/BreadcrumbTrail";
-import { MainContainer } from "../components/MainContainer";
 import { BottomContainer } from "../components/BottomContainer";
 import { Footer } from "../components/Footer";
-
-import React from "react";
+import { Hero } from "../components/Hero";
+import { HomeMainContainer } from "../components/HomeMainContainer";
+import { News } from "../components/News";
 
 export const Home = () => {
   return (
-    <div className="post">
+    <div className="home">
       <Header />
-      <BreadcrumbTrail />
-      <MainContainer />
+      <Hero />
+      <HomeMainContainer />
+      <News />
       <BottomContainer />
       <Footer />
     </div>
