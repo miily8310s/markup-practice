@@ -4,8 +4,6 @@ import { MainContainer } from "../components/MainContainer";
 import { BottomContainer } from "../components/BottomContainer";
 import { Footer } from "../components/Footer";
 
-import React from "react";
-
 export const Post = () => {
   return (
     <div className="post">

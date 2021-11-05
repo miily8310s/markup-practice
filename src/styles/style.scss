@@ -597,6 +597,124 @@ img {
     }
   }
 }
+
+.sidebar-post .main-container {
+  // コンテナ内に収まるスタイル集
+  padding: 80px 4%;
+  background: url(../assets/post-bg.svg) repeat-x;
+  background-position: 0 10px;
+}
+.side-popular {
+  border: 1px solid $black-color;
+  margin-bottom: 60px;
+  a {
+    color: $black-color;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  h2 {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    font-family: "Croissant One", cursive;
+    font-weight: 400;
+    color: $white-color;
+    font-size: 0.75rem;
+    background: url("../assets/side-titleshape.svg");
+  }
+  p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+.side-latest {
+  margin-bottom: 60px;
+  h2 {
+    margin: 0 0 10px 0;
+    font-family: "Croissant One", cursive;
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    column-gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid $deep-gray-color;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+  img {
+    border-radius: 50%;
+  }
+  p {
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  a {
+    color: $black-color;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+.side-book {
+  margin-bottom: 60px;
+  h2 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-family: "Croissant One", cursive;
+    font-weight: 400;
+    font-size: 1.25rem;
+    background: $black-color;
+    color: $white-color;
+    padding: 5px;
+  }
+}
+.book-info {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 10px;
+}
+.book-image {
+  grid-row: 1/3;
+}
+.book-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  p {
+    margin: 0;
+  }
+}
+.buy {
+  align-self: end;
+  justify-items: start;
+  button {
+    padding: 0.5rem 3rem;
+    border-radius: 100px;
+    border: none;
+    background: $black-color;
+    color: $white-color;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
 /**
  * Webブラウザ用
  */
@@ -769,5 +887,15 @@ img {
     max-width: 740px;
     margin: 0 auto;
     padding: 60px 20px;
+  }
+  .sidebar-post .main-container {
+    padding: 80px 20px;
+    margin: 0 auto;
+    max-width: $breakpoint-web;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 290px;
+    gap: 40px;
   }
 }
