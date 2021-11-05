@@ -597,6 +597,13 @@ img {
     }
   }
 }
+
+.sidebar-post .main-container {
+  // コンテナ内に収まるスタイル集
+  padding: 80px 4%;
+  background: url(../assets/post-bg.svg) repeat-x;
+  background-position: 0 10px;
+}
 /**
  * Webブラウザ用
  */
@@ -769,5 +776,15 @@ img {
     max-width: 740px;
     margin: 0 auto;
     padding: 60px 20px;
+  }
+  .sidebar-post .main-container {
+    padding: 80px 20px;
+    margin: 0 auto;
+    max-width: $breakpoint-web;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 290px;
+    gap: 40px;
   }
 }
