@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./styles/style.scss";
+import "./styles/stylesecond.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

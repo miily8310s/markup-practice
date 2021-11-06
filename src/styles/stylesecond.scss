@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+$white-color: #fff;
+$shallow-white-color: #888;
+$gray-color: #999;
+$shallow-black-color: #333;
+
+.singlePage {
+  font-family: "Raleway", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.singlePageHeader {
+  background: url(../assets/bg.png);
+  background-size: cover;
+  padding: 170px 30px 80px;
+  text-align: center;
+  color: $white-color;
+}
+.singlePageHeaderTitleSub {
+  margin: 0 0 30px;
+  &::before,
+  &::after {
+    content: "";
+    width: 140px;
+    height: 2px;
+    margin: 0 30px;
+    background: $white-color;
+    display: inline-block;
+    // インラインおよびテーブル要素のみ適用可
+    vertical-align: middle;
+  }
+}
+.singlePageHeaderTitle {
+  margin: 50px 0 40px;
+  font-size: 60px;
+}
+.singlePageHeaderDescription {
+  margin: 0 0 50px;
+  color: $shallow-white-color;
+}
+.singlePageHeaderButton {
+  // リンク要素のデフォルトはdisplay: inline
+  display: inline-block;
+  color: $white-color;
+  text-decoration: none;
+  padding: 20px;
+  background-color: #afa58d;
+  border-radius: 4px;
+  margin: 10px;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.-showy {
+    background-color: #f1b400;
+  }
+}
+.singlePageAbout {
+  padding: 80px 30px;
+  color: #333;
+  text-align: center;
+}
+.singlePageAboutHeading {
+  margin: 30px 0 45px;
+  padding: 15px;
+  font-size: 30px;
+  position: relative;
+  // h2要素はデフォルトでdisplay: block
+  // display: inline-blockにすることでwidthが文字が出ているところだけになる
+  display: inline-block;
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border-bottom: 1px solid $gray-color;
+  }
+  &::after {
+    bottom: 5px;
+  }
+}
+.singlePageAboutTexts {
+  margin: 30px 0;
+}
+.singlePageAboutText {
+  line-height: 1.5;
+}
